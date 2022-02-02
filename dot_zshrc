@@ -84,7 +84,6 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-iterm-touchbar
   sudo
 )
 
@@ -98,6 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+export EDITOR="code --wait"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -120,7 +121,6 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
 
 function homestead() {
     ( cd ~/Homestead && vagrant $* )
@@ -168,15 +168,27 @@ export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
 
 
 # Custom LSD aliases ===================
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
 
 
 # Custom Chezmoi alias ===================
-alias cz='chezmoi'
+alias cz="chezmoi"
+
+
+# Custom IP ECHO alias ==================
+alias myip="curl https://ipecho.io/plain; echo"
+
+
+# Custom DEV aliases
+alias nis="npm install --save "
+alias gac="git add . && git commit -a -m "
+alias mkcd="foo(){ mkdir -p "$1"; cd "$1" }; foo "
+alias svim="sudo vim "
+alias snano="sudo nano "
 
 
 # Youtube-dl aliases ===================
