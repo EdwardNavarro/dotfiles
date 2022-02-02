@@ -187,8 +187,9 @@ alias myip="curl https://ipecho.io/plain; echo"
 alias nis="npm install --save "
 alias gac="git add . && git commit -a -m "
 alias mkcd="foo(){ mkdir -p "$1"; cd "$1" }; foo "
-alias svim="sudo vim "
+alias svim="sudo nvim "
 alias snano="sudo nano "
+alias vim="nvim"
 
 
 # Youtube-dl aliases ===================
