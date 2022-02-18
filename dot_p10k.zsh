@@ -36,6 +36,10 @@
     dir                     # current directory
     dir_writable	    # directory is writable
     vcs                     # git status
+    command_execution_time
+    background_jobs
+    root_indicator
+    status
     # =========================[ Line #2 ]=========================
     newline                 # \n
     # prompt_char           # prompt symbol
@@ -47,12 +51,12 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    status                  # exit code of the last command
-    root_indicator
-    background_jobs         # presence of background jobs
-    command_execution_time  # duration of the last command
-    history
-    time
+    # status                  # exit code of the last command
+    # root_indicator
+    # background_jobs         # presence of background jobs
+    # command_execution_time  # duration of the last command
+    #history
+    #time
     #direnv                  # direnv status (https://direnv.net/)
     #asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     #virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
