@@ -122,41 +122,11 @@ export EDITOR="code --wait"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Homestead and Vagrant custom alias
 function homestead() {
     ( cd ~/Homestead && vagrant $* )
 }
 
-#ServerAliveInterval 120
-
-# ********************************************************************
-# POWERLEVEL9K SETTINGS FOR (en)
-# ********************************************************************
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-# POWERLEVEL9K_PROMPT_ADD_NEWLINE_COUNT=2
-# POWERLEVEL9K_TIME_FOREGROUND='red'
-# POWERLEVEL9K_TIME_BACKGROUND='blue'
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\uE0B1'
-# POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\uE0B3'
-# POWERLEVEL9K_MODE='nerdfont-complete'
-# POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
-# POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-# POWERLEVEL9K_STATUS_VERBOSE=false
-# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
-# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
-
-# Visual customisation of the second prompt line
-# local user_symbol="$"
-# if [[ $(print -P "%#") =~ "#" ]]; then
-#     user_symbol = "#"
-# fi
-# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460 %B$user_symbol%b %f"
-# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
-
-# . /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Google Chrome custom alias =================
 alias chrome="open -a 'Google Chrome'"
@@ -197,29 +167,45 @@ alias vim="nvim"
 ytda() {
     youtube-dl -x --audio-format mp3 "$1"
 }
-
 # Download video with audio track on mp4 format
 ytdv() {
     youtube-dl -f mp4 "$1"
 }
 
 
+# Clear ZSH history custom alias
+alias clhistory="echo '' > ~/.zsh_history"
+
+
+# ZSH History configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt histignorealldups sharehistory
+
+
 export PATH="/usr/local/opt/pcsc-lite/bin:$PATH"
 export PATH="/usr/local/opt/pcsc-lite/sbin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# FZF plugin source
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+# AVR-GCC source
 export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
+
 
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
+
 
 #### NVM configuration
 export NVM_DIR=~/.nvm
