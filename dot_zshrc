@@ -3,17 +3,24 @@
 # Please make sure this block is at the start of this file.
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 #### END FIG ENV VARIABLES ####
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/bin:/usr/bin/git:/usr/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-#export PATH="/usr/local/opt/node@14/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+# export PATH="/usr/local/opt/node@14/bin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
+
+# Wine source
+export PATH="/Applications/Wine Staging.app/Contents/Resources/wine/bin:$PATH"
+export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
+export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/edwardnavarro/.oh-my-zsh"
@@ -142,7 +149,7 @@ alias ls="lsd"
 alias l="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
-alias lt="ls --tree"
+alias ltr="ls --tree"
 
 
 # Custom Chezmoi alias ===================
@@ -171,6 +178,10 @@ ytda() {
 ytdv() {
     youtube-dl -f mp4 "$1"
 }
+
+
+# Mikrotik Winbox alias ===================
+alias winbox="wine64 /Applications/winbox64.exe"
 
 
 # Clear ZSH history custom alias
