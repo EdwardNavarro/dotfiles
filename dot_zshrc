@@ -167,6 +167,8 @@ alias mkcd="foo(){ mkdir -p "$1"; cd "$1" }; foo "
 alias svim="sudo nvim "
 alias snano="sudo nano "
 alias vim="nvim"
+alias cleanstart="watchman watch-del-all && killall -9 node && rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && npm install && cd ios && pod update && cd .. && npm start -- --reset-cache"
+alias cleanstartdeps="watchman watch-del-all && killall -9 node && rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && npm install --legacy-peer-deps && cd ios && pod update && cd .. && npm start -- --reset-cache"
 
 
 # Youtube-dl aliases ===================
