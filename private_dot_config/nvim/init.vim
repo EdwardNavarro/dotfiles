@@ -15,6 +15,8 @@ set ruler
 set cursorline
 set encoding=utf-8
 set showmatch
+set signcolumn=yes
+set colorcolumn=120
 set sw=2
 
 set laststatus=2
@@ -31,20 +33,31 @@ call plug#begin('~/.config/nvim/pluged')
 " THEMES
 Plug 'morhetz/gruvbox'
 " IDE
+Plug 'jremmen/vim-ripgrep'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale', { 'on': 'ALEToggle' }
 Plug 'sheerun/vim-polyglot'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'ryanoasis/vim-devicons'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-syntastic/syntastic', { 'on': 'SyntasticToggleMode' }
 call plug#end()
 
 colorscheme gruvbox
