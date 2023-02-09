@@ -34,5 +34,8 @@
 	"theme": 2,
 	"export.pdfPageSize": "Letter",
 	"style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font",
-	"style.editor.fontFamily": "JetBrainsMono Nerd Font"
+	"style.editor.fontFamily": "JetBrainsMono Nerd Font",
+	"spellChecker.languages": [
+		"en-US"
+	]
 }
