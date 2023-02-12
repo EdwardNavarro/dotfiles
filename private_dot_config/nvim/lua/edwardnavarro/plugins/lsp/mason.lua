@@ -27,14 +27,14 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"sumneko_lua",
-    "jsonls",
-    "graphql",
-    "intelephense",
-    "dotls",
-    "eslint",
-    "emmet_ls",
-    "marksman",
-    "pyright",
+		"jsonls",
+		"graphql",
+		"intelephense",
+		"dotls",
+		"eslint",
+		"emmet_ls",
+		"marksman",
+		"pyright",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -50,4 +50,3 @@ mason_null_ls.setup({
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
 })
-
