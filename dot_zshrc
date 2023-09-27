@@ -12,6 +12,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
+export PATH=$PATH:$HOME/.rvm/bin
 
 
 # Wine source
@@ -106,8 +107,11 @@ alias chrome="open -a 'Google Chrome'"
 
 
 # GnuPG =======================
-export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
-[ -S "$SSH_AUTH_SOCK" ] || gpgconf --launch gpg-agent
+# export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
+# [ -S "$SSH_AUTH_SOCK" ] || gpgconf --launch gpg-agent
+
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
 
 
 # Custom LSD aliases ===================
