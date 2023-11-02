@@ -1,41 +1,37 @@
 {
-	"$schema": "https://joplinapp.org/schema/settings.json",
-	"locale": "en_US",
-	"api.token": "1c5188d29199ca0586b3d3900ce92c7e08e1c602c8e836ce76b2d7f5963d33c841d3004e7c383e7c02d5969de9d8dae6b25386e662e09c53afa82ca9ce25d4b8",
-	"markdown.plugin.softbreaks": false,
-	"markdown.plugin.typographer": false,
-	"spellChecker.language": "en-US",
-	"ui.layout": {
-		"key": "root",
-		"children": [
-			{
-				"key": "sideBar",
-				"width": 250,
-				"visible": true
-			},
-			{
-				"key": "noteList",
-				"width": 250,
-				"visible": true
-			},
-			{
-				"key": "editor",
-				"visible": true
-			}
-		],
-		"visible": true
-	},
-	"noteVisiblePanes": [
-		"editor",
-		"viewer"
-	],
-	"timeFormat": "h:mm A",
-	"editor": "/Applications/VSCodium.app",
-	"theme": 2,
-	"export.pdfPageSize": "Letter",
-	"style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font",
-	"style.editor.fontFamily": "JetBrainsMono Nerd Font",
-	"spellChecker.languages": [
-		"en-US"
-	]
+  "$schema": "https://joplinapp.org/schema/settings.json",
+  "locale": "en_US",
+  "api.token": "1c5188d29199ca0586b3d3900ce92c7e08e1c602c8e836ce76b2d7f5963d33c841d3004e7c383e7c02d5969de9d8dae6b25386e662e09c53afa82ca9ce25d4b8",
+  "markdown.plugin.softbreaks": false,
+  "markdown.plugin.typographer": false,
+  "spellChecker.language": "en-US",
+  "ui.layout": {
+    "key": "root",
+    "children": [
+      {
+        "key": "sideBar",
+        "width": 250,
+        "visible": true
+      },
+      {
+        "key": "noteList",
+        "width": 250,
+        "visible": true
+      },
+      {
+        "key": "editor",
+        "visible": true
+      }
+    ],
+    "visible": true
+  },
+  "noteVisiblePanes": ["editor", "viewer"],
+  "timeFormat": "h:mm A",
+  "editor": "\"/Applications/Visual Studio Code.app\"",
+  "theme": 2,
+  "export.pdfPageSize": "Letter",
+  "style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "style.editor.fontFamily": "JetBrainsMono Nerd Font",
+  "spellChecker.languages": ["en-US"],
+  "sync.target": 7
 }
