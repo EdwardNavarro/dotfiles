@@ -130,6 +130,12 @@ p() {
 }
 
 
+# Custom common aliases ===================
+alias ..="cd .."
+alias gc="git commit -m $1"
+alias dev="cd ~/Dev"
+
+
 # Custom LSD aliases ===================
 alias ls="lsd"
 alias l="ls -l"
