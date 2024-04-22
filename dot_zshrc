@@ -191,8 +191,8 @@ alias clhistory="echo '' > ~/.zsh_history"
 
 # ZSH History configuration
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
 setopt histignorealldups sharehistory
 
 
@@ -207,6 +207,13 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # FZF plugin source
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
+
+
+# Ngrok completions
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
 
 
 # AVR-GCC source
