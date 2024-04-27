@@ -203,8 +203,8 @@ alias clhistory="echo '' > ~/.zsh_history"
 
 # ZSH History configuration
 HISTFILE=~/.zsh_history
-HISTSIZE=250
-SAVEHIST=250
+HISTSIZE=1000
+SAVEHIST=1000
 setopt histignorealldups sharehistory
 
 
