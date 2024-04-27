@@ -133,6 +133,18 @@ alias gc="git commit -m $1"
 alias dev="cd ~/Dev"
 
 
+# Custom Shopify aliases ===================
+shop() {
+  command shopify "$@"
+}
+
+
+# Custom common aliases ===================
+alias ..="cd .."
+alias gc="git commit -m $1"
+alias dev="cd ~/Dev"
+
+
 # Custom LSD aliases ===================
 alias ls="lsd"
 alias l="ls -l"
@@ -218,6 +230,10 @@ fi
 
 # AVR-GCC source
 export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
+
+
+# PACKAGE CONFIG PATH
+export PKG_CONFIG_PATH="/usr/local/opt/libarchive/lib/pkgconfig"
 
 
 #### NVM configuration
