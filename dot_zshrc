@@ -44,6 +44,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 
+# Enamble NVM lazy loading
+export NVM_LAZY=1
+
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -54,6 +58,10 @@ plugins=(
   sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
+  npm
+  nvm
+  brew
+  fzf
 )
 
 
@@ -217,11 +225,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# FZF plugin source
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fzf --zsh)"
-
-
 # Ngrok completions
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
@@ -234,9 +237,3 @@ export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
 
 # PACKAGE CONFIG PATH
 export PKG_CONFIG_PATH="/usr/local/opt/libarchive/lib/pkgconfig"
-
-
-#### NVM configuration
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-#### END NVM configuration
