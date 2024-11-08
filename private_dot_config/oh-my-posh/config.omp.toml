@@ -14,6 +14,8 @@ yellow = '#ffcc66'
 grape = '#7A306C'
 purple = '#49416D'
 magenta = '#c3a6ff'
+silver-blue = '#778da9'
+dark-green = '#14281D'
 
 # --polynesian-blue: #064789ff;
 # --ucla-blue: #427aa1ff;
@@ -130,13 +132,16 @@ type = 'status'
 [blocks.segments.properties]
 always_enabled = true
 
+
 # Right prompt
 [[blocks]]
-type = 'rprompt'
+type = 'prompt'
+alignment = 'right'
+overflow = 'break'
 
-# Time segment
+# Execution time segment
 [[blocks.segments]]
-template = '<p:yellow>󱦟</> <p:white><b>{{ .FormattedMs }}</b></>'
+template = '<p:yellow>󱦟</> <p:white><b>{{ .FormattedMs }}</b></> '
 foreground = 'p:white'
 background = 'transparent'
 type = 'executiontime'
@@ -144,6 +149,16 @@ style = 'plain'
 
 [blocks.segments.properties]
 always_enabled = true
+
+# Time segment
+[[blocks.segments]]
+type = "time"
+style = "plain"
+foreground = "p:green2"
+background = "p:dark-green"
+
+[blocks.segments.properties]
+time_format = "15:04:05"
 
 # Tooltips
 # AWS segment
@@ -159,3 +174,18 @@ tips = ['aws']
 
 [tooltips.properties]
 display_default = true
+
+
+# Left prompt (secondary line)
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+# Command line segment
+[[blocks.segments]]
+background = 'transparent'
+foreground = 'p:silver-blue'
+template = "╰─"
+style = 'plain'
+type = 'text'
